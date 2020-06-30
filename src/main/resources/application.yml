@@ -1,0 +1,57 @@
+#服务器端口
+server:
+  port: 8848
+
+spring:
+  application:
+    name: springboot-demo
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 1
+      max-active: 50
+      #min-idle: 10
+      max-wait: 180000 #Default value is 30000 (30 seconds)60000->180000
+      time-between-eviction-runs-millis: 600000 #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒，default value is 5000 (5 seconds)->60000-600000
+      min-evictable-idle-time-millis: 3600000 #配置一个连接在池中最小生存的时间，单位是毫秒，default value is 60000 (60 seconds)->300000-3600000
+      pool-prepared-statements: false #是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。
+      url: jdbc:mysql://rm-bp1ei4333vqw9w8xmoo.mysql.rds.aliyuncs.com:3306/face_users?useUnicode=true&characterEncoding=utf-8
+      username: park
+      password: epoch@2019
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  #redis配置
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 5000
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+
+  #mq配置
+  rabbitmq:
+    #addresses: localhost:5672
+    #rabiitmq服务器地址
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 10000
+
+    #消息确认配置
+    #确认消息发送到交换机(Exchange)
+    publisher-confirm-type: simple
+    #确认消息已经被消费者消费
+    publisher-returns: true
+
+  #security设置用户名和密码
+#  security:
+#    user:
+#      name: user
+#      password: 123456
