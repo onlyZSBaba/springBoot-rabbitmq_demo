@@ -24,7 +24,6 @@ public class UserReceiver {
             )
     public void receiveMessage(String name){
         log.info("消息已经收到了 : {}",name);
-        System.out.println("找到了"+name);
     }
 
 }

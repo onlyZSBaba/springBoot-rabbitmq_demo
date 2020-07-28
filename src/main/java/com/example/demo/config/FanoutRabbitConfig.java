@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 扇形交换机配置类
+ * 扇形交换机配置类(创建队列和交换机)
  * @author : Z
  * @version : 1.0
  * @Date : 2020/6/29

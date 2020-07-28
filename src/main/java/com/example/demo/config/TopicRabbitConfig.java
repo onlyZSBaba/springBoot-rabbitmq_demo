@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 主题消息队列配置
+ * 主题消息队列配置(创建队列和交换机)
  * @author : Z
  * @version : 1.0
  * @Date : 2020/6/29

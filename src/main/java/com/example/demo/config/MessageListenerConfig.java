@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 消息接收处理配置
+ * 消息接收处理配置 设置哪些队列的消息消息手动确认
  * @author : Z
  * @version : 1.0
  * @Date : 2020/6/29

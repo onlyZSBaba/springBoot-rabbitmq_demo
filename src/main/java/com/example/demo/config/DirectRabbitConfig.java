@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * 订阅模型(直连) 消息队列配置
+ * 订阅模型(直连) 消息队列配置(创建队列和交换机)
  * @author : Z
  * @version : 1.0
  * @Date : 2020/6/29

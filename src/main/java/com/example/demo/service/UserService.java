@@ -14,7 +14,6 @@ public class UserService {
 
     public String findUser(String name){
         log.info("正在执行findUser方法");
-        //return "找到了"+name;
         return "ok";
     }
 

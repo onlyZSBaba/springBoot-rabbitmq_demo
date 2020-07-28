@@ -1,4 +1,4 @@
-#·şÎñÆ÷¶Ë¿Ú
+#æœåŠ¡å™¨ç«¯å£
 server:
   port: 8848
 
@@ -12,14 +12,14 @@ spring:
       max-active: 50
       #min-idle: 10
       max-wait: 180000 #Default value is 30000 (30 seconds)60000->180000
-      time-between-eviction-runs-millis: 600000 #ÅäÖÃ¼ä¸ô¶à¾Ã²Å½øĞĞÒ»´Î¼ì²â£¬¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞÁ¬½Ó£¬µ¥Î»ÊÇºÁÃë£¬default value is 5000 (5 seconds)->60000-600000
-      min-evictable-idle-time-millis: 3600000 #ÅäÖÃÒ»¸öÁ¬½ÓÔÚ³ØÖĞ×îĞ¡Éú´æµÄÊ±¼ä£¬µ¥Î»ÊÇºÁÃë£¬default value is 60000 (60 seconds)->300000-3600000
-      pool-prepared-statements: false #ÊÇ·ñ»º´æpreparedStatement£¬Ò²¾ÍÊÇPSCache¡£PSCache¶ÔÖ§³ÖÓÎ±êµÄÊı¾İ¿âĞÔÄÜÌáÉı¾Ş´ó£¬±ÈÈçËµoracle¡£ÔÚmysqlÏÂ½¨Òé¹Ø±Õ¡£
+      time-between-eviction-runs-millis: 600000 #é…ç½®é—´éš”å¤šä¹…æ‰è¿›è¡Œä¸€æ¬¡æ£€æµ‹ï¼Œæ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²è¿æ¥ï¼Œå•ä½æ˜¯æ¯«ç§’ï¼Œdefault value is 5000 (5 seconds)->60000-600000
+      min-evictable-idle-time-millis: 3600000 #é…ç½®ä¸€ä¸ªè¿æ¥åœ¨æ± ä¸­æœ€å°ç”Ÿå­˜çš„æ—¶é—´ï¼Œå•ä½æ˜¯æ¯«ç§’ï¼Œdefault value is 60000 (60 seconds)->300000-3600000
+      pool-prepared-statements: false #æ˜¯å¦ç¼“å­˜preparedStatementï¼Œä¹Ÿå°±æ˜¯PSCacheã€‚PSCacheå¯¹æ”¯æŒæ¸¸æ ‡çš„æ•°æ®åº“æ€§èƒ½æå‡å·¨å¤§ï¼Œæ¯”å¦‚è¯´oracleã€‚åœ¨mysqlä¸‹å»ºè®®å…³é—­ã€‚
       url: jdbc:mysql://rm-bp1ei4333vqw9w8xmoo.mysql.rds.aliyuncs.com:3306/face_users?useUnicode=true&characterEncoding=utf-8
       username: park
       password: epoch@2019
       driver-class-name: com.mysql.cj.jdbc.Driver
-  #redisÅäÖÃ
+  #redisé…ç½®
   redis:
     database: 0
     host: 127.0.0.1
@@ -33,10 +33,10 @@ spring:
         min-idle: 0
         max-wait: -1
 
-  #mqÅäÖÃ
+  #mqé…ç½®
   rabbitmq:
     #addresses: localhost:5672
-    #rabiitmq·şÎñÆ÷µØÖ·
+    #rabiitmqæœåŠ¡å™¨åœ°å€
     host: 127.0.0.1
     port: 5672
     username: guest
@@ -44,14 +44,14 @@ spring:
     virtual-host: /
     connection-timeout: 10000
 
-    #ÏûÏ¢È·ÈÏÅäÖÃ
-    #È·ÈÏÏûÏ¢·¢ËÍµ½½»»»»ú(Exchange)
+    #æ¶ˆæ¯ç¡®è®¤é…ç½®
+    #ç¡®è®¤æ¶ˆæ¯å‘é€åˆ°äº¤æ¢æœº(Exchange)
     publisher-confirm-type: simple
-    #È·ÈÏÏûÏ¢ÒÑ¾­±»Ïû·ÑÕßÏû·Ñ
+    #ç¡®è®¤æ¶ˆæ¯å·²ç»è¢«æ¶ˆè´¹è€…æ¶ˆè´¹
     publisher-returns: true
 
-  #securityÉèÖÃÓÃ»§ÃûºÍÃÜÂë
-#  security:
-#    user:
-#      name: user
-#      password: 123456
+  #securityè®¾ç½®ç”¨æˆ·åå’Œå¯†ç 
+  security:
+    user:
+      name: user
+      password: 123456
